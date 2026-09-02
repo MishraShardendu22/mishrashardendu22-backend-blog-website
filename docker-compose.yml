@@ -1,0 +1,32 @@
+services:
+  blog-backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: shardendumishra22/blog-backend:latest
+    container_name: blog-backend
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - DATABASE_URL=${DATABASE_URL:-}
+      - UPSTASH_REDIS_REST_URL=${UPSTASH_REDIS_REST_URL:-}
+      - UPSTASH_REDIS_REST_TOKEN=${UPSTASH_REDIS_REST_TOKEN:-}
+      - SENDGRID_API_KEY=${SENDGRID_API_KEY:-}
+      - MAIL_ID=${MAIL_ID:-}
+      - JWT_SECRET=${JWT_SECRET:-dev-jwt-secret-min-32-chars-long}
+      - PORTFOLIO_JWT_SECRET=${PORTFOLIO_JWT_SECRET:-dev-portfolio-secret}
+      - OWNER_EMAIL=${OWNER_EMAIL:-shardendumishra22@gmail.com}
+      - FRONTEND_URL=${FRONTEND_URL:-http://localhost:5173,http://localhost:3000}
+      - OTP_EXPIRY_MINUTES=10
+
+  redis:
+    image: redis:alpine
+    container_name: blog-redis-local
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    profiles:
+      - local-infra
