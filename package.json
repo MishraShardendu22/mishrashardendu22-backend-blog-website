@@ -32,31 +32,31 @@
 	"dependencies": {
 		"@neondatabase/serverless": "^1.1.0",
 		"@sendgrid/mail": "^8.1.6",
-		"@upstash/redis": "^1.38.0",
+		"@upstash/redis": "^1.38.4",
 		"bcryptjs": "^3.0.3",
-		"bullmq": "^5.80.7",
+		"bullmq": "^5.81.4",
 		"compression": "^1.8.1",
 		"cors": "^2.8.6",
 		"dotenv": "^17.4.2",
 		"drizzle-orm": "^0.45.2",
 		"express": "^5.2.1",
-		"express-rate-limit": "^8.6.0",
+		"express-rate-limit": "^8.7.0",
 		"helmet": "^8.3.0",
 		"jsonwebtoken": "^9.0.3"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^2.5.4",
+		"@biomejs/biome": "^2.5.12",
 		"@types/compression": "^1.8.1",
 		"@types/cors": "^2.8.19",
 		"@types/express": "^5.0.6",
 		"@types/jsonwebtoken": "^9.0.10",
-		"@types/node": "^26.1.1",
+		"@types/node": "^26.4.1",
 		"@types/supertest": "^7.2.1",
 		"drizzle-kit": "^0.31.10",
 		"husky": "^9.1.7",
 		"supertest": "^7.2.2",
-		"tsx": "^4.23.1",
+		"tsx": "^4.23.13",
 		"typescript": "^7.0.2",
-		"vitest": "^4.1.10"
+		"vitest": "^4.1.11"
 	}
 }
